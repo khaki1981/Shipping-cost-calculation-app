@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>送料計算アプリ</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; }
+    input, select, button { padding: 8px; width: 100%; }
+    .result { margin-top: 20px; padding: 10px; background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <h1>陶芸体験 料金計算</h1>
+  <div>
+    <div class="form-group">
+      <label for="participants">参加人数:</label>
+      <input type="number" id="participants" placeholder="例: 1" required>
+    </div>
+    <div class="form-group">
+      <label for="weight">作品の重さ (g):</label>
+      <input type="number" id="weight" placeholder="例: 500">
+    </div>
+    <div class="form-group">
+      <label for="handle">取っ手を希望:</label>
+      <select id="handle">
+        <option value="0">希望しない</option>
+        <option value="500">希望する (+500円)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="packageCount">梱包箇所数:</label>
+      <input type="number" id="packageCount" placeholder="例: 1">
+    </div>
+    <div class="form-group">
+      <label for="destination">発送先の国:</label>
+      <input type="text" id="destination" placeholder="例: USA">
+    </div>
+    <div class="form-group">
+      <label for="method">発送方法:</label>
+      <select id="method">
+        <option value="EMS">EMS</option>
+        <option value="Air">航空便</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button id="calculate">料金を計算する</button>
+    </div>
+  </div>
+  <div id="result" class="result"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
